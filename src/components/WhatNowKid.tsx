@@ -9,7 +9,7 @@ import { Sparkles, Shuffle, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import heroImage from "@/assets/hero-kids-activities.jpg";
 
-const ageRanges = ['0-1', '1-2', '3-4', '5-7', '8-10', '10-12'];
+const ageRanges = ['0-1', '1-3', '3-6', '6-10', '10+'];
 const goals: Goal[] = ['Calm Down', 'Burn Energy', 'Beat Boredom', 'Connect', 'Quiet Time'];
 
 export const WhatNowKid = () => {
