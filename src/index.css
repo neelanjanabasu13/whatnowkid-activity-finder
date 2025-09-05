@@ -2,80 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-/* WhatNow Kid - Family-friendly design system */
+/* WhatNow Kid - Playful & Vibrant Design System */
 
 @layer base {
   :root {
     /* Background & Surface Colors */
-    --background: 195 100% 98%;
-    --foreground: 210 12% 15%;
-    --surface: 200 100% 99%;
-    --surface-soft: 190 60% 97%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --surface: 0 0% 99%;
+    --surface-soft: 210 40% 98%;
 
-    /* Brand Colors - Playful & Family-friendly */
-    --primary: 195 85% 52%;
+    /* Brand Colors - Kid-Friendly & Vibrant */
+    --primary: 213 94% 68%;        /* Sky blue - playful and trustworthy */
     --primary-foreground: 0 0% 100%;
-    --primary-soft: 195 75% 85%;
-    --primary-glow: 195 85% 65%;
+    --primary-soft: 213 94% 85%;
+    --primary-glow: 213 94% 78%;
 
-    --secondary: 140 50% 60%;
+    --secondary: 160 84% 39%;      /* Emerald green - nature and growth */
     --secondary-foreground: 0 0% 100%;
-    --secondary-soft: 140 45% 85%;
+    --secondary-soft: 160 84% 85%;
 
-    --accent: 45 95% 65%;
-    --accent-foreground: 210 12% 15%;
-    --accent-soft: 45 85% 90%;
+    --accent: 43 96% 56%;          /* Cheerful amber */
+    --accent-foreground: 222 47% 11%;
+    --accent-soft: 43 96% 85%;
+
+    /* Fun Colors for Variety */
+    --purple: 270 91% 65%;
+    --orange: 25 95% 53%;
+    --pink: 330 81% 60%;
+    --lime: 84 81% 44%;
 
     /* Interactive Elements */
     --card: 0 0% 100%;
-    --card-foreground: 210 12% 15%;
-    --card-border: 200 30% 92%;
-    --card-hover: 200 50% 98%;
-
-    --button-primary: var(--primary);
-    --button-primary-hover: 195 85% 45%;
-    --button-secondary: var(--secondary);
-    --button-secondary-hover: 140 50% 52%;
+    --card-foreground: 222 47% 11%;
+    --card-border: 213 27% 84%;
+    --card-hover: 213 94% 95%;
 
     /* Text & Content */
-    --text-primary: 210 12% 15%;
-    --text-secondary: 210 8% 45%;
-    --text-muted: 210 6% 60%;
+    --text-primary: 222 47% 11%;
+    --text-secondary: 215 25% 27%;
+    --text-muted: 215 16% 47%;
 
     /* Interactive States */
-    --border: 200 30% 88%;
-    --input: 200 30% 92%;
+    --border: 213 27% 84%;
+    --input: 213 27% 84%;
     --ring: var(--primary);
     --selected: var(--primary-soft);
     --hover: var(--surface-soft);
 
     /* Semantic Colors */
-    --success: 140 65% 55%;
-    --warning: 35 85% 60%;
-    --destructive: 0 75% 60%;
+    --success: 160 84% 39%;
+    --warning: 43 96% 56%;
+    --destructive: 0 84% 60%;
     --info: var(--primary);
 
-    /* Layout */
-    --radius: 1rem;
-    --radius-sm: 0.75rem;
-    --radius-lg: 1.5rem;
+    /* Layout - Consistent rounded corners */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
 
-    /* Shadows & Effects */
-    --shadow-soft: 0 2px 10px -2px hsl(210 12% 15% / 0.08);
-    --shadow-card: 0 4px 25px -5px hsl(210 12% 15% / 0.1);
-    --shadow-button: 0 2px 8px -2px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
+    /* Colorful Shadows using brand colors */
+    --shadow-soft: 0 2px 10px -2px hsl(213 94% 68% / 0.1);
+    --shadow-card: 0 4px 25px -5px hsl(213 94% 68% / 0.15);
+    --shadow-button: 0 2px 8px -2px hsl(213 94% 68% / 0.3);
+    --shadow-glow: 0 0 30px hsl(213 94% 68% / 0.4);
+    --shadow-secondary: 0 4px 20px -4px hsl(160 84% 39% / 0.25);
+    --shadow-accent: 0 4px 20px -4px hsl(43 96% 56% / 0.25);
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(140 50% 70%));
-    --gradient-warm: linear-gradient(135deg, hsl(var(--accent)), hsl(25 85% 70%));
-    --gradient-surface: linear-gradient(180deg, hsl(var(--surface)), hsl(var(--surface-soft)));
+    /* Multiple Predefined Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 78%));
+    --gradient-secondary: linear-gradient(135deg, hsl(160 84% 39%), hsl(160 84% 55%));
+    --gradient-rainbow: linear-gradient(135deg, hsl(213 94% 68%), hsl(270 91% 65%), hsl(330 81% 60%), hsl(43 96% 56%));
+    --gradient-soft: linear-gradient(135deg, hsl(213 94% 95%), hsl(160 84% 95%));
+    --gradient-accent: linear-gradient(135deg, hsl(43 96% 56%), hsl(25 95% 53%));
 
-    /* Animations */
-    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Playful Animations - Bounce and smooth easing */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-playful: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .dark {

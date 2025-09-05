@@ -47,6 +47,11 @@ export default {
 					foreground: 'hsl(var(--accent-foreground))',
 					soft: 'hsl(var(--accent-soft))',
 				},
+				// Fun colors for variety
+				purple: 'hsl(var(--purple))',
+				orange: 'hsl(var(--orange))',
+				pink: 'hsl(var(--pink))',
+				lime: 'hsl(var(--lime))',
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
@@ -71,18 +76,22 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-warm': 'var(--gradient-warm)',
-				'gradient-surface': 'var(--gradient-surface)',
+				'gradient-rainbow': 'var(--gradient-rainbow)',
+				'gradient-soft': 'var(--gradient-soft)',
+				'gradient-accent': 'var(--gradient-accent)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'card': 'var(--shadow-card)',
 				'button': 'var(--shadow-button)',
 				'glow': 'var(--shadow-glow)',
+				'secondary': 'var(--shadow-secondary)',
+				'accent': 'var(--shadow-accent)',
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
 				'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'playful': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
