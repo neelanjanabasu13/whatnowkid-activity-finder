@@ -11,17 +11,17 @@ interface ToggleSwitchProps {
 export const ToggleSwitch = ({ leftLabel, rightLabel, value, onChange, className }: ToggleSwitchProps) => {
   return (
     <div className={cn(
-      "inline-flex rounded-xl p-1 bg-surface border border-card-border shadow-soft",
+      "inline-flex rounded-full p-1 bg-surface-soft border border-card-border shadow-soft w-full",
       className
     )}>
       <button
         onClick={() => onChange('left')}
         className={cn(
-          "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ease-bounce",
+          "flex-1 px-6 py-3 rounded-full text-sm font-semibold font-fredoka transition-all duration-300 ease-bounce",
           "hover:scale-105 active:scale-95",
           value === 'left'
-            ? "bg-gradient-secondary text-secondary-foreground shadow-button"
-            : "text-text-secondary hover:text-text-primary hover:bg-hover"
+            ? "bg-gradient-primary text-white shadow-button"
+            : "text-text-secondary hover:text-text-primary hover:bg-hover/50"
         )}
       >
         {leftLabel}
@@ -29,11 +29,11 @@ export const ToggleSwitch = ({ leftLabel, rightLabel, value, onChange, className
       <button
         onClick={() => onChange('right')}
         className={cn(
-          "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ease-bounce",
+          "flex-1 px-6 py-3 rounded-full text-sm font-semibold font-fredoka transition-all duration-300 ease-bounce",
           "hover:scale-105 active:scale-95",
           value === 'right'
-            ? "bg-gradient-secondary text-secondary-foreground shadow-button"
-            : "text-text-secondary hover:text-text-primary hover:bg-hover"
+            ? "bg-gradient-to-r from-purple to-pink text-white shadow-button"
+            : "text-text-secondary hover:text-text-primary hover:bg-hover/50"
         )}
       >
         {rightLabel}

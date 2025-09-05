@@ -10,7 +10,7 @@ interface SegmentedControlProps {
 export const SegmentedControl = ({ options, value, onChange, className }: SegmentedControlProps) => {
   return (
     <div className={cn(
-      "inline-flex rounded-xl p-1 bg-surface border border-card-border shadow-soft",
+      "inline-flex rounded-full p-1 bg-surface-soft border border-card-border shadow-soft",
       className
     )}>
       {options.map((option) => (
@@ -18,11 +18,11 @@ export const SegmentedControl = ({ options, value, onChange, className }: Segmen
           key={option}
           onClick={() => onChange(option)}
           className={cn(
-            "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ease-smooth",
+            "px-6 py-3 rounded-full text-sm font-semibold font-fredoka transition-all duration-300 ease-bounce min-w-20",
             "hover:scale-105 active:scale-95",
             value === option
-              ? "bg-gradient-primary text-primary-foreground shadow-button"
-              : "text-text-secondary hover:text-text-primary hover:bg-hover"
+              ? "bg-gradient-primary text-white shadow-button"
+              : "text-text-secondary hover:text-text-primary hover:bg-hover/50"
           )}
         >
           {option}
