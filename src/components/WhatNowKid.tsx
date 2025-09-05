@@ -95,6 +95,14 @@ export const WhatNowKid = () => {
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Header with Hero Image */}
         <div className="text-center mb-12">
+          {/* Activity Finder Badge */}
+          <div className="mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-primary text-white rounded-full font-semibold shadow-button">
+              <Sparkles className="w-4 h-4" />
+              Activity Finder
+            </div>
+          </div>
+          
           <div className="relative mb-8 rounded-2xl overflow-hidden shadow-card">
             <img 
               src={heroImage} 
@@ -105,7 +113,7 @@ export const WhatNowKid = () => {
             <div className="absolute bottom-6 left-0 right-0">
               <div className="inline-flex items-center gap-2 mb-4">
                 <Heart className="w-8 h-8 text-primary" />
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-rainbow bg-clip-text text-transparent font-fredoka">
                   WhatNow Kid
                 </h1>
                 <Heart className="w-8 h-8 text-primary" />
