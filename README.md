@@ -1,73 +1,161 @@
-# Welcome to your Lovable project
+# WhatNow Kid — Instant Activity Ideas for Parents
 
-## Project info
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-latest-black)](https://ui.shadcn.com/)
 
-**URL**: https://lovable.dev/projects/509402bb-333e-4da8-b500-62f38c8ea43e
+**Live site:** [https://whatnowkid-activity-finder.lovable.app](https://whatnowkid-activity-finder.lovable.app)
 
-## How can I edit this code?
+WhatNow Kid is a playful, zero-friction activity finder for parents, caregivers, and teachers. Pick a child’s age, the goal of the moment, and a few quick preferences, and get instant, curated screen-free activity ideas — no more blank-staring at a rainy afternoon.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## What the app does
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/509402bb-333e-4da8-b500-62f38c8ea43e) and start prompting.
+- **355+ curated activities** across every age, mood, environment, cost, and parenting style.
+- **Smart filtering** matches activities to the *moment*, not just the child’s age.
+- **Zero mental load** — one click for a full list, or “I’m Feeling Lucky” for a single random pick.
+- **Completely screen-free focus** — every idea gets kids moving, creating, calming, or connecting.
+- **Guide pages** like `/screen-free-activities` help parents discover even more unplugged ideas.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## How to use the filters
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The filter panel is the heart of the app. Mix and match any combination:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 1. Age Range
+Choose one or more age groups:
 
-Follow these steps:
+- `0-1` — Infant sensory and calm-down ideas
+- `1-3` — Toddler movement and exploration
+- `3-6` — Preschool creativity and play
+- `6-10` — School-age projects and games
+- `10+` — Older kid challenges and independent play
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### 2. Goal
+Pick what you need the activity to *do* for your child’s mood:
+
+- **Calm Down** — sensory, soothing, low-stimulation ideas
+- **Burn Energy** — active, physical, high-movement play
+- **Beat Boredom** — quick novelty and engagement boosters
+- **Connect** — together-time activities for bonding
+- **Quiet Time** — independent, low-energy, reset activities
+
+### 3. Environment
+- **Any** — indoors or outdoors
+- **Indoor** — rainy-day, small-space friendly
+- **Outdoor** — yard, park, or nature play
+
+### 4. Cost
+- **Any** — free or paid
+- **Free** — uses household items only
+- **Paid** — may use small craft supplies, toys, or inexpensive materials
+
+### 5. Parenting Style
+- **Hands Off** — child-led or minimal supervision
+- **Hands On** — caregiver joins in or guides the activity
+
+### Results
+Click **Show Activities** to see every match, or **I’m Feeling Lucky** for one random idea. Every combination of filters is guaranteed to return **5+ activities**.
+
+---
+
+## Local development
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [npm](https://www.npmjs.com/) or your preferred package manager
+
+> The fastest way to manage Node versions is with [nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+### 1. Clone the repo
+
+```bash
 git clone <YOUR_GIT_URL>
+cd <YOUR_REPO_NAME>
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 2. Install dependencies
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 3. Start the dev server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080` with hot reload enabled.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 4. Build for production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The production bundle is written to `dist/`.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## Project structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+├── public/                  # Static assets, sitemap, robots.txt, llms.txt
+├── src/
+│   ├── components/          # UI components (filters, cards, switches)
+│   ├── data/                # 355+ activity records and goal mappings
+│   ├── pages/               # Route-level pages (Index, ScreenFree, 404)
+│   ├── hooks/               # Shared React hooks
+│   ├── lib/                 # Utilities and cn() helper
+│   ├── index.css            # Global styles and Tailwind tokens
+│   └── App.tsx              # Route definitions
+├── index.html               # App shell, SEO meta tags
+├── tailwind.config.ts       # Tailwind theme and custom animations
+├── tsconfig.json            # TypeScript configuration
+└── vite.config.ts           # Vite configuration
+```
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/509402bb-333e-4da8-b500-62f38c8ea43e) and click on Share -> Publish.
+## Tech stack
 
-## Can I connect a custom domain to my Lovable project?
+- **Vite** — fast build tooling and dev server
+- **React 18** — UI library
+- **TypeScript** — type-safe development
+- **Tailwind CSS** — utility-first styling
+- **shadcn/ui** — accessible, composable components
+- **Lucide React** — icon set
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Editing this project
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+You can edit this project in three ways:
+
+1. **In Lovable** — visit the project at https://lovable.dev/projects/509402bb-333e-4da8-b500-62f38c8ea43e and prompt changes directly. Commits sync automatically.
+2. **In your local IDE** — clone the repo, make changes, and push. Pushes sync back to Lovable.
+3. **In GitHub / Codespaces** — edit files directly on GitHub or open a Codespace.
+
+---
+
+## Deploying
+
+To publish or update the live site, open the project in [Lovable](https://lovable.dev/projects/509402bb-333e-4da8-b500-62f38c8ea43e) and go to **Share → Publish**.
+
+You can also connect a custom domain under **Project → Settings → Domains**.
+
+---
+
+## License
+
+This project is open for personal and educational use. See [LICENSE](./LICENSE) if included, or add your preferred license.
+
+---
+
+Made with ❤️ for parents who need a win on a hard day.
