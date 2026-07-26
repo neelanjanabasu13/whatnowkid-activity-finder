@@ -146,6 +146,41 @@ export const WhatNowKid = () => {
               </div>
             </div>
 
+            {/* Environment */}
+            <div>
+              <h2 className="text-sm font-semibold text-text-primary mb-4">Environment</h2>
+              <SegmentedControl
+                options={['Any', 'Indoor', 'Outdoor']}
+                value={environment}
+                onChange={setEnvironment}
+              />
+            </div>
+
+            {/* Cost */}
+            <div>
+              <h2 className="text-sm font-semibold text-text-primary mb-4">Cost</h2>
+              <SegmentedControl
+                options={['Any', 'Free', 'Paid']}
+                value={cost}
+                onChange={setCost}
+              />
+            </div>
+
+            {/* Parenting Style */}
+            <div className="md:col-span-2">
+              <h2 className="text-sm font-semibold text-text-primary mb-4">Parenting Style</h2>
+              <ToggleSwitch
+                leftLabel="Hands Off"
+                rightLabel="Hands On"
+                value={parentingStyle}
+                onChange={setParentingStyle}
+              />
+            </div>
+          </div>
+        </div>
+
+
+
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
