@@ -91,7 +91,7 @@ export const WhatNowKid = () => {
   const hasFilters = selectedAges.length > 0 || selectedGoals.length > 0 || environment !== 'Any' || cost !== 'Any';
 
   return (
-    <div className="min-h-screen bg-gradient-surface">
+    <main className="min-h-screen bg-gradient-surface">
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Header with Hero Image */}
         <div className="text-center mb-12">
@@ -114,7 +114,7 @@ export const WhatNowKid = () => {
               <div className="inline-flex items-center gap-2 mb-4">
                 <Heart className="w-8 h-8 text-primary" />
                 <h1 className="text-4xl md:text-5xl font-bold bg-gradient-rainbow bg-clip-text text-transparent font-fredoka">
-                  WhatNow Kid
+                  WhatNow Kid — Instant Activity Ideas for Parents
                 </h1>
                 <Heart className="w-8 h-8 text-primary" />
               </div>
@@ -130,7 +130,7 @@ export const WhatNowKid = () => {
           <div className="space-y-8">
             {/* Age */}
             <div>
-              <h3 className="text-lg font-semibold text-text-primary mb-4">Age Range</h3>
+              <h2 className="text-lg font-semibold text-text-primary mb-4">Age Range</h2>
               <div className="flex flex-wrap gap-3">
                 {ageRanges.map((age) => (
                   <FilterChip
@@ -146,7 +146,7 @@ export const WhatNowKid = () => {
 
             {/* Goals */}
             <div>
-              <h3 className="text-lg font-semibold text-text-primary mb-4">What's the goal?</h3>
+              <h2 className="text-lg font-semibold text-text-primary mb-4">What's the goal?</h2>
               <div className="flex flex-wrap gap-3">
                 {goals.map((goal) => (
                   <FilterChip
@@ -163,7 +163,7 @@ export const WhatNowKid = () => {
             {/* Environment & Cost */}
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-text-primary mb-4">Environment</h3>
+                <h2 className="text-lg font-semibold text-text-primary mb-4">Environment</h2>
                 <SegmentedControl
                   options={['Any', 'Indoor', 'Outdoor']}
                   value={environment}
@@ -171,7 +171,7 @@ export const WhatNowKid = () => {
                 />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-text-primary mb-4">Cost</h3>
+                <h2 className="text-lg font-semibold text-text-primary mb-4">Cost</h2>
                 <SegmentedControl
                   options={['Any', 'Free', 'Paid']}
                   value={cost}
@@ -182,7 +182,7 @@ export const WhatNowKid = () => {
 
             {/* Parenting Style */}
             <div>
-              <h3 className="text-lg font-semibold text-text-primary mb-4">Parenting Style</h3>
+              <h2 className="text-lg font-semibold text-text-primary mb-4">Parenting Style</h2>
               <ToggleSwitch
                 leftLabel="Hands Off"
                 rightLabel="Hands On"
@@ -277,6 +277,6 @@ export const WhatNowKid = () => {
           </div>
         )}
       </div>
-    </div>
+    </main>
   );
 };

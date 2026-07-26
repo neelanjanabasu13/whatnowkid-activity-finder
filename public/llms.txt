@@ -1,0 +1,9 @@
+# WhatNow Kid
+
+> Instant activity ideas for kids with zero mental load. Parents filter by age, mood, environment, cost, and parenting style to get ready-to-play ideas in seconds.
+
+WhatNow Kid helps parents and caregivers beat the "what should we do now?" moment. Pick your child's age range and current mood (calm down, burn energy, beat boredom, connect, quiet time), narrow by indoor/outdoor, free/paid, and hands-on/hands-off, and get curated activity cards with materials, setup time, and duration.
+
+## Pages
+
+- [Home](/): Filter activities by age, goal, environment, cost, and parenting style, and get instant ideas.
