@@ -131,14 +131,14 @@ export const WhatNowKid = () => {
             {/* Age */}
             <div>
               <h2 className="text-lg font-semibold text-text-primary mb-4">Age Range</h2>
-              <div className="flex flex-wrap gap-3">
+              <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
                 {ageRanges.map((age) => (
                   <FilterChip
                     key={age}
                     selected={selectedAges.includes(age)}
                     onClick={() => toggleAge(age)}
                   >
-                    {age} years
+                    {age} yrs
                   </FilterChip>
                 ))}
               </div>
@@ -147,7 +147,7 @@ export const WhatNowKid = () => {
             {/* Goals */}
             <div>
               <h2 className="text-lg font-semibold text-text-primary mb-4">What's the goal?</h2>
-              <div className="flex flex-wrap gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                 {goals.map((goal) => (
                   <FilterChip
                     key={goal}
@@ -159,6 +159,7 @@ export const WhatNowKid = () => {
                 ))}
               </div>
             </div>
+
 
             {/* Environment & Cost */}
             <div className="grid md:grid-cols-2 gap-8">
