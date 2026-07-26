@@ -91,7 +91,7 @@ export const WhatNowKid = () => {
   const hasFilters = selectedAges.length > 0 || selectedGoals.length > 0 || environment !== 'Any' || cost !== 'Any';
 
   return (
-    <div className="min-h-screen bg-gradient-surface">
+    <main className="min-h-screen bg-gradient-surface">
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Header with Hero Image */}
         <div className="text-center mb-12">
@@ -114,7 +114,7 @@ export const WhatNowKid = () => {
               <div className="inline-flex items-center gap-2 mb-4">
                 <Heart className="w-8 h-8 text-primary" />
                 <h1 className="text-4xl md:text-5xl font-bold bg-gradient-rainbow bg-clip-text text-transparent font-fredoka">
-                  WhatNow Kid
+                  WhatNow Kid — Instant Activity Ideas for Parents
                 </h1>
                 <Heart className="w-8 h-8 text-primary" />
               </div>
