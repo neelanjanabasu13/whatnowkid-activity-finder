@@ -92,59 +92,39 @@ export const WhatNowKid = () => {
 
   return (
     <main className="min-h-screen bg-gradient-surface">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
-        {/* Header with Hero Image */}
-        <div className="text-center mb-12">
-          {/* Activity Finder Badge */}
+      <div className="container mx-auto px-4 py-12 max-w-5xl">
+        {/* Header */}
+        <div className="text-center mb-10">
           <div className="mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-primary text-white rounded-full font-semibold shadow-button">
               <Sparkles className="w-4 h-4" />
               Activity Finder
             </div>
           </div>
-          
-          <div className="relative mb-8 rounded-2xl overflow-hidden shadow-card group">
-            <img
-              src={heroImage}
-              alt="Children engaged in various fun activities - playing, reading, creating art, and exploring"
-              className="w-full h-64 md:h-80 object-cover animate-ken-burns motion-reduce:animate-none"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-            {/* Floating sparkles */}
-            <Sparkles className="absolute top-6 left-8 w-6 h-6 text-yellow-300 animate-sparkle drop-shadow-lg motion-reduce:animate-none" style={{ animationDelay: '0s' }} />
-            <Sparkles className="absolute top-10 right-12 w-5 h-5 text-pink-300 animate-sparkle drop-shadow-lg motion-reduce:animate-none" style={{ animationDelay: '0.8s' }} />
-            <Sparkles className="absolute top-20 left-1/3 w-4 h-4 text-purple-300 animate-sparkle drop-shadow-lg motion-reduce:animate-none" style={{ animationDelay: '1.6s' }} />
-            <Sparkles className="absolute bottom-24 right-1/4 w-5 h-5 text-orange-300 animate-sparkle drop-shadow-lg motion-reduce:animate-none" style={{ animationDelay: '1.2s' }} />
-            <div className="absolute bottom-6 left-0 right-0">
-              <div className="inline-flex items-center gap-2 mb-4">
-                <Heart className="w-8 h-8 text-primary animate-float-slow motion-reduce:animate-none" fill="currentColor" />
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-rainbow bg-clip-text text-transparent font-fredoka animate-fade-in">
-                  WhatNow Kid — Instant Activity Ideas for Parents
-                </h1>
-                <Heart className="w-8 h-8 text-primary animate-float-slower motion-reduce:animate-none" fill="currentColor" />
-              </div>
-            </div>
-          </div>
 
-          <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Instant activity ideas, zero mental load.
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-rainbow bg-clip-text text-transparent font-fredoka animate-fade-in mb-4">
+            WhatNow Kid
+          </h1>
+
+          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
+            Instant activity ideas, zero mental load. Find the perfect activity for your child's age, mood, and energy level.
           </p>
         </div>
 
         {/* Filters */}
-        <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card mb-8 border border-card-border">
-          <div className="space-y-8">
+        <div className="bg-card rounded-2xl p-6 md:p-10 shadow-card mb-8 border border-card-border">
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-8">
             {/* Age */}
             <div>
-              <h2 className="text-lg font-semibold text-text-primary mb-4">Age Range</h2>
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+              <h2 className="text-sm font-semibold text-text-primary mb-4">Age Range</h2>
+              <div className="flex flex-wrap gap-2">
                 {ageRanges.map((age) => (
                   <FilterChip
                     key={age}
                     selected={selectedAges.includes(age)}
                     onClick={() => toggleAge(age)}
                   >
-                    {age} yrs
+                    {age}
                   </FilterChip>
                 ))}
               </div>
@@ -152,8 +132,8 @@ export const WhatNowKid = () => {
 
             {/* Goals */}
             <div>
-              <h2 className="text-lg font-semibold text-text-primary mb-4">What's the goal?</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+              <h2 className="text-sm font-semibold text-text-primary mb-4">Goal</h2>
+              <div className="flex flex-wrap gap-2">
                 {goals.map((goal) => (
                   <FilterChip
                     key={goal}
@@ -166,39 +146,6 @@ export const WhatNowKid = () => {
               </div>
             </div>
 
-
-            {/* Environment & Cost */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h2 className="text-lg font-semibold text-text-primary mb-4">Environment</h2>
-                <SegmentedControl
-                  options={['Any', 'Indoor', 'Outdoor']}
-                  value={environment}
-                  onChange={setEnvironment}
-                />
-              </div>
-              <div>
-                <h2 className="text-lg font-semibold text-text-primary mb-4">Cost</h2>
-                <SegmentedControl
-                  options={['Any', 'Free', 'Paid']}
-                  value={cost}
-                  onChange={setCost}
-                />
-              </div>
-            </div>
-
-            {/* Parenting Style */}
-            <div>
-              <h2 className="text-lg font-semibold text-text-primary mb-4">Parenting Style</h2>
-              <ToggleSwitch
-                leftLabel="Hands Off"
-                rightLabel="Hands On"
-                value={parentingStyle}
-                onChange={setParentingStyle}
-              />
-            </div>
-          </div>
-        </div>
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
