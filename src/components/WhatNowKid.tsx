@@ -103,23 +103,29 @@ export const WhatNowKid = () => {
             </div>
           </div>
           
-          <div className="relative mb-8 rounded-2xl overflow-hidden shadow-card">
-            <img 
-              src={heroImage} 
-              alt="Children engaged in various fun activities - playing, reading, creating art, and exploring" 
-              className="w-full h-64 md:h-80 object-cover"
+          <div className="relative mb-8 rounded-2xl overflow-hidden shadow-card group">
+            <img
+              src={heroImage}
+              alt="Children engaged in various fun activities - playing, reading, creating art, and exploring"
+              className="w-full h-64 md:h-80 object-cover animate-ken-burns motion-reduce:animate-none"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            {/* Floating sparkles */}
+            <Sparkles className="absolute top-6 left-8 w-6 h-6 text-yellow-300 animate-sparkle drop-shadow-lg motion-reduce:animate-none" style={{ animationDelay: '0s' }} />
+            <Sparkles className="absolute top-10 right-12 w-5 h-5 text-pink-300 animate-sparkle drop-shadow-lg motion-reduce:animate-none" style={{ animationDelay: '0.8s' }} />
+            <Sparkles className="absolute top-20 left-1/3 w-4 h-4 text-purple-300 animate-sparkle drop-shadow-lg motion-reduce:animate-none" style={{ animationDelay: '1.6s' }} />
+            <Sparkles className="absolute bottom-24 right-1/4 w-5 h-5 text-orange-300 animate-sparkle drop-shadow-lg motion-reduce:animate-none" style={{ animationDelay: '1.2s' }} />
             <div className="absolute bottom-6 left-0 right-0">
               <div className="inline-flex items-center gap-2 mb-4">
-                <Heart className="w-8 h-8 text-primary" />
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-rainbow bg-clip-text text-transparent font-fredoka">
+                <Heart className="w-8 h-8 text-primary animate-float-slow motion-reduce:animate-none" fill="currentColor" />
+                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-rainbow bg-clip-text text-transparent font-fredoka animate-fade-in">
                   WhatNow Kid — Instant Activity Ideas for Parents
                 </h1>
-                <Heart className="w-8 h-8 text-primary" />
+                <Heart className="w-8 h-8 text-primary animate-float-slower motion-reduce:animate-none" fill="currentColor" />
               </div>
             </div>
           </div>
+
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
             Instant activity ideas, zero mental load.
           </p>
