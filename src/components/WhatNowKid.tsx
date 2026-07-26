@@ -277,6 +277,6 @@ export const WhatNowKid = () => {
           </div>
         )}
       </div>
-    </div>
+    </main>
   );
 };
