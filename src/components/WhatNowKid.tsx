@@ -130,7 +130,7 @@ export const WhatNowKid = () => {
           <div className="space-y-8">
             {/* Age */}
             <div>
-              <h3 className="text-lg font-semibold text-text-primary mb-4">Age Range</h3>
+              <h2 className="text-lg font-semibold text-text-primary mb-4">Age Range</h2>
               <div className="flex flex-wrap gap-3">
                 {ageRanges.map((age) => (
                   <FilterChip
@@ -146,7 +146,7 @@ export const WhatNowKid = () => {
 
             {/* Goals */}
             <div>
-              <h3 className="text-lg font-semibold text-text-primary mb-4">What's the goal?</h3>
+              <h2 className="text-lg font-semibold text-text-primary mb-4">What's the goal?</h2>
               <div className="flex flex-wrap gap-3">
                 {goals.map((goal) => (
                   <FilterChip
@@ -163,7 +163,7 @@ export const WhatNowKid = () => {
             {/* Environment & Cost */}
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-text-primary mb-4">Environment</h3>
+                <h2 className="text-lg font-semibold text-text-primary mb-4">Environment</h2>
                 <SegmentedControl
                   options={['Any', 'Indoor', 'Outdoor']}
                   value={environment}
@@ -171,7 +171,7 @@ export const WhatNowKid = () => {
                 />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-text-primary mb-4">Cost</h3>
+                <h2 className="text-lg font-semibold text-text-primary mb-4">Cost</h2>
                 <SegmentedControl
                   options={['Any', 'Free', 'Paid']}
                   value={cost}
@@ -182,7 +182,7 @@ export const WhatNowKid = () => {
 
             {/* Parenting Style */}
             <div>
-              <h3 className="text-lg font-semibold text-text-primary mb-4">Parenting Style</h3>
+              <h2 className="text-lg font-semibold text-text-primary mb-4">Parenting Style</h2>
               <ToggleSwitch
                 leftLabel="Hands Off"
                 rightLabel="Hands On"
