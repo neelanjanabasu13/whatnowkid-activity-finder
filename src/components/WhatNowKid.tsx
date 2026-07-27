@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles, Shuffle, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import heroImage from "@/assets/hero-kids-activities.jpg";
+import { activityMatchesWeather, WEATHER_OPTIONS, type Weather } from "@/lib/weather";
 
 const ageRanges = ['0-1', '1-3', '3-6', '6-10', '10+'];
 const goals: Goal[] = ['Calm Down', 'Burn Energy', 'Beat Boredom', 'Connect', 'Quiet Time'];
@@ -17,7 +18,7 @@ export const WhatNowKid = () => {
   const [selectedAges, setSelectedAges] = useState<string[]>([]);
   const [selectedGoals, setSelectedGoals] = useState<Goal[]>([]);
   const [environment, setEnvironment] = useState<string>('Any');
-  const [cost, setCost] = useState<string>('Any');
+  const [weather, setWeather] = useState<Weather>('Any');
   const [parentingStyle, setParentingStyle] = useState<'left' | 'right'>('left');
   const [showResults, setShowResults] = useState(false);
   const [showSingle, setShowSingle] = useState(false);
@@ -61,8 +62,8 @@ export const WhatNowKid = () => {
         return false;
       }
 
-      // Cost filter
-      if (cost !== 'Any' && activity.cost !== cost) {
+      // Weather filter
+      if (!activityMatchesWeather(activity, weather)) {
         return false;
       }
 
@@ -74,7 +75,7 @@ export const WhatNowKid = () => {
 
       return true;
     });
-  }, [selectedAges, selectedGoals, environment, cost, parentingStyle]);
+  }, [selectedAges, selectedGoals, environment, weather, parentingStyle]);
 
   const handleShowActivities = () => {
     setShowResults(true);
@@ -88,7 +89,7 @@ export const WhatNowKid = () => {
 
   const randomActivity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)];
 
-  const hasFilters = selectedAges.length > 0 || selectedGoals.length > 0 || environment !== 'Any' || cost !== 'Any';
+  const hasFilters = selectedAges.length > 0 || selectedGoals.length > 0 || environment !== 'Any' || weather !== 'Any';
 
   return (
     <main className="min-h-screen bg-gradient-surface">
@@ -156,14 +157,25 @@ export const WhatNowKid = () => {
               />
             </div>
 
-            {/* Cost */}
+            {/* Weather */}
             <div>
-              <h2 className="text-sm font-semibold text-text-primary mb-4">Cost</h2>
-              <SegmentedControl
-                options={['Any', 'Free', 'Paid']}
-                value={cost}
-                onChange={setCost}
-              />
+              <h2 className="text-sm font-semibold text-text-primary mb-4">Weather</h2>
+              <div className="flex flex-wrap gap-2">
+                {WEATHER_OPTIONS.map((w) => (
+                  <FilterChip
+                    key={w}
+                    selected={weather === w}
+                    onClick={() => setWeather(w)}
+                  >
+                    {w === 'Sunny' ? '☀️ Sunny'
+                      : w === 'Cloudy' ? '☁️ Cloudy'
+                      : w === 'Rainy' ? '🌧️ Rainy'
+                      : w === 'Windy' ? '💨 Windy'
+                      : w === 'Snowy' ? '❄️ Snowy'
+                      : w}
+                  </FilterChip>
+                ))}
+              </div>
             </div>
 
             {/* Parenting Style */}
