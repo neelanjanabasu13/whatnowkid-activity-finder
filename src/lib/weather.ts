@@ -26,7 +26,7 @@ export function getActivityWeathers(activity: Activity): Exclude<Weather, "Any">
     .toLowerCase();
 
   // Explicit weather-specific activities
-  if (has(text, ["puddle", "rain boot", "rainy", " rain "])) return ["Rainy"];
+  if (has(text, ["puddle", "rain boot", "rainy", " rain ", "raindrop", "rain dance", "storm", "porch", "awning", "under the awning"])) return ["Rainy"];
   if (has(text, ["snow", "sled", "snowman", "snowball", "icicle"])) return ["Snowy"];
   if (has(text, ["kite", "windmill", "streamer race"])) return ["Windy", "Sunny", "Cloudy"];
   if (has(text, ["star gaz", "moon", "night sky", "constellation"])) return ["Cloudy", "Windy"];
