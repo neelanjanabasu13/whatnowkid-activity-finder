@@ -286,7 +286,7 @@ export const WhatNowKid = () => {
         {/* Footer / Find me */}
         <footer className="mt-16 pt-8 border-t border-card-border">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-            <p className="text-sm text-text-muted font-medium">Find me</p>
+            <p className="text-sm text-text-muted font-medium">Made by Neelanjana Basu</p>
             <div className="flex items-center gap-4">
               <a
                 href="https://neelanjanabasu.lovable.app/"
