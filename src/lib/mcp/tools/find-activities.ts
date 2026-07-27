@@ -1,6 +1,6 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
-import { activitiesData, goalMapping, type Goal, type Activity, type Mood } from "../../data/activities";
+import { activitiesData, goalMapping, type Goal, type Activity, type Mood } from "../../../data/activities";
 
 const AGE_VALUES = ["0-1", "1-3", "3-6", "6-10", "10+"] as const;
 const GOAL_VALUES: [Goal, ...Goal[]] = ["Calm Down", "Burn Energy", "Beat Boredom", "Connect", "Quiet Time"];

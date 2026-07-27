@@ -1,5 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
-import { activitiesData } from "../../data/activities";
+import { activitiesData } from "../../../data/activities";
 
 export default defineTool({
   name: "list_filters",
