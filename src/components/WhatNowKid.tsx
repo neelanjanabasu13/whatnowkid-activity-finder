@@ -282,6 +282,33 @@ export const WhatNowKid = () => {
             </p>
           </div>
         )}
+
+        {/* Footer / Find me */}
+        <footer className="mt-16 pt-8 border-t border-card-border">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+            <p className="text-sm text-text-muted font-medium">Find me</p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://neelanjanabasu.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Neelanjana Basu portfolio"
+                className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-card border border-card-border text-text-secondary shadow-sm transition-all hover:scale-110 hover:text-primary hover:border-primary hover:shadow-button"
+              >
+                <Globe className="w-5 h-5" />
+              </a>
+              <a
+                href="https://x.com/nee13njana"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X / Twitter profile"
+                className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-card border border-card-border text-text-secondary shadow-sm transition-all hover:scale-110 hover:text-text-primary hover:border-text-primary hover:shadow-button"
+              >
+                <XIcon className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
   );
